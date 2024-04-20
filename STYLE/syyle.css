@@ -1,21 +1,29 @@
 .desc {
-    display: flex;
-    flex-wrap: wrap;
-    width: 404px;
-    height: 404px;
-    border: 2px double black;
+  width: 400px;
+  height: 400px;
+  border: 2px double black;
+  display: flex;
+  flex-wrap: wrap;
   }
-  
-  .square {
-    width: 50px; 
-    height: 50px;
+
+.line {
+  width: 400px;
+  height: 50px;
+  display: flex;
   }
-  
-  .square:nth-child(odd) {
-    background-color:#000; 
-  }
-  
-  .square:nth-child(2n) {
-    background-color: white; 
-  }
-  
+.square{
+  height: 50px;
+  width: 50px;
+}
+.line:nth-child(odd) .square:nth-child(odd){
+  background: #000;
+}
+.line:nth-child(odd) .square:nth-child(even){
+  background: white;
+}
+.line:nth-child(even) .square:nth-child(even){
+  background: #000;
+}
+.line:nth-child(even) .square:nth-child(odd){
+  background: white;
+}
